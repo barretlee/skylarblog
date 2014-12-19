@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title><![CDATA[Skylar's Personal Blog]]></title>
-  <subtitle><![CDATA[Happy everyday]]></subtitle>
+  <subtitle><![CDATA[大四本科生一枚，专注于前端技术，喜欢接触新事物，喜欢与人交流...]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.zhangmengxue.com/"/>
-  <updated>2014-12-19T17:39:20.819Z</updated>
+  <updated>2014-12-19T18:51:27.018Z</updated>
   <id>http://www.zhangmengxue.com/</id>
   
   <author>
