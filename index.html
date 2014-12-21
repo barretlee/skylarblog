@@ -180,11 +180,12 @@ hexo d -g
 简写：hexo n page <span class="keyword">about</span>
 </code></pre><p>这条命令就可以生成一个 about 页面。</p>
 <p>更多信息: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="把文章推到自己的_github_上">把文章推到自己的 github 上</h3>
+<h3 id="把修改保存到自己的_github_上">把修改保存到自己的 github 上</h3>
 <pre><code><span class="preprocessor"># 添加自己的仓库源</span>
 git remote add skylar https:<span class="comment">//github.com/zhangmengxue/blog.git</span>
 <span class="preprocessor"># 推上去</span>
 git push skylar master
+<span class="preprocessor">## 这里需要注意的是，不需要管 gh-pages 分支，这个分支已经被 hexo 自动推送了</span>
 </code></pre><h2 id="六、其他方面的介绍">六、其他方面的介绍</h2>
 <p>在 themes/jacman 中可以配置页面信息，css 采用 stylus 写的，博客信息的配置也可在 <code>themes/jacman/_config.yml</code> 中修改。</p>
 <p>如果需要修改文件内容，建议直接在全局搜索关键词。</p>
