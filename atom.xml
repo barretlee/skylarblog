@@ -4,7 +4,7 @@
   <subtitle><![CDATA[大四本科生一枚，专注于前端技术，喜欢接触新事物，喜欢与人交流...]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://zhangmengxue.com/"/>
-  <updated>2014-12-21T12:21:34.098Z</updated>
+  <updated>2014-12-21T12:23:14.081Z</updated>
   <id>http://zhangmengxue.com/</id>
   
   <author>
@@ -16,8 +16,8 @@
   
   <entry>
     <title><![CDATA[关于博客主题以及HEXO的使用]]></title>
-    <link href="http://zhangmengxue.com/2014/12/20/hello-world/"/>
-    <id>http://zhangmengxue.com/2014/12/20/hello-world/</id>
+    <link href="http://zhangmengxue.com/2014/12/20/hei-hexo/"/>
+    <id>http://zhangmengxue.com/2014/12/20/hei-hexo/</id>
     <published>2014-12-19T19:10:39.000Z</published>
     <updated>2014-12-21T12:21:23.000Z</updated>
     <content type="html"><![CDATA[<p>博客使用 <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a> 搭建的，他相关的文档介绍在这里 <a href="http://hexo.io/docs/" target="_blank" rel="external">DOC</a>。</p>
