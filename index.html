@@ -77,145 +77,29 @@
     <div id="container">
       <div id="main">
 
-   
+  
+<section class="post" itemscope itemprop="blogitem">
+  
+    <a href="/2014/12/20/hei-hexo/" title="关于博客主题以及HEXO的使用" itemprop="url">
+  
+    <h1 itemprop="name">关于博客主题以及HEXO的使用</h1>
     
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2014/12/20/hei-hexo/" title="关于博客主题以及HEXO的使用" itemprop="url">关于博客主题以及HEXO的使用</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="http://zhangmengxue.com/about" title="skylar" target="_blank" itemprop="author">skylar</a>
-		
-  <p class="article-time">
-    <time datetime="2014-12-19T19:10:39.000Z" itemprop="datePublished"> 发表于 2014-12-20</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>博客使用 <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a> 搭建的，他相关的文档介绍在这里 <a href="http://hexo.io/docs/" target="_blank" rel="external">DOC</a>。</p>
-<h2 id="一、下载代码">一、下载代码</h2>
-<p>现在自己的 github 下新建一个叫做 blog 的仓库。然后到本地找个目录：</p>
-<h3 id="新建文件夹">新建文件夹</h3>
-<pre><code><span class="built_in">mkdir</span> skylarBlog
-<span class="keyword">cd</span> skylarBlog
-</code></pre><h3 id="fork_代码">fork 代码</h3>
-<pre><code><span class="preprocessor"># 初始化</span>
+     
+           <p itemprop="description" >博客使用 Hexo 搭建的，他相关的文档介绍在这里 DOC。
+一、下载代码
+现在自己的 github 下新建一个叫做 blog 的仓库。然后到本地找个目录：
+新建文件夹
+mkdir skylarBlog
+cd skylarBlog
+fork 代码
+# 初始化
 git init
-<span class="preprocessor"># 添加源</span>
-git remote add barret https:<span class="comment">//github.com/barretlee/skylarblog.git</span>
-<span class="preprocessor"># 拉取代码，记得要加 barret</span>
-git pull barret
-</code></pre><h3 id="切换分支">切换分支</h3>
-<pre><code><span class="preprocessor"># 切换主干代码</span>
-git checkout master
-</code></pre><h2 id="二、安装_hexo_及相关插件">二、安装 hexo 及相关插件</h2>
-<h3 id="第一步先安装_hexo：">第一步先安装 hexo：</h3>
-<pre><code><span class="preprocessor"># (mac/linux)下使用 sudo安装</span>
-npm install -g hexo 
-<span class="preprocessor"># 初始化一个 hexo 项目</span>
-hexo init  
-</code></pre><p>给博客安装 5 个插件：</p>
-<ul>
-<li>hexo-generator-feed    </li>
-<li>hexo-renderer-ejs      </li>
-<li>hexo-renderer-stylus</li>
-<li>hexo-generator-sitemap </li>
-<li>hexo-renderer-marked</li>
-</ul>
-<p>写在 <code>package.json</code> 文件中，通过 <code>npm install</code> 即可安装。</p>
-<h3 id="安装组件">安装组件</h3>
-<pre><code><span class="comment"># 运行插件安装命令</span>
-<span class="built_in">npm</span> install
-简写： <span class="built_in">npm</span> i
-</code></pre><h2 id="三、文件目录及配置">三、文件目录及配置</h2>
-<pre><code>├── _config.yml       <span class="preprocessor"># 配置文件</span>
-├── <span class="keyword">package</span>.json      <span class="preprocessor"># npm 配置文件</span>
-├── <span class="keyword">public</span>            <span class="preprocessor"># 别鸟他</span>
-├── scaffolds         <span class="preprocessor"># 别鸟他</span>
-├── source            <span class="preprocessor"># 文章全部在这里</span>
-│   ├── CNAME         <span class="preprocessor"># 用于配置域名</span>
-│   ├── _posts        <span class="preprocessor"># 文章内容（文件夹）</span>
-│   └── about         <span class="preprocessor"># 可直接访问的页面</span>
-└── themes            <span class="preprocessor"># 主题，可在 _config.yml 中配置主题类型</span>
-    ├── jacman
-    └── landscape
-</code></pre><p>配置 _config.yml，在最后找到：</p>
-<pre><code>deploy:
-  <span class="class"><span class="keyword">type</span>: <span class="title">github</span></span>
-  repository: https:<span class="comment">//github.com/barretlee/skylarblog.git</span>
-  branch: gh-pages   
-</code></pre><p>将 repository 改成你自己的地址，<code>https://github.com/zhangmengxue/blog.git</code></p>
-<p>目前在 master 分支下操作，执行下面的命令之后，会在 github 上自动生成一个 gh-pages 分支，这个分支不用理会，它是自动生成的。只需要在这个分支下开发。</p>
-<h2 id="四、快速指南">四、快速指南</h2>
-<h3 id="编译">编译</h3>
-<pre><code><span class="variable">$ </span>hexo generate
-简写：hexo g
-</code></pre><p>编辑的文档使用的 md 语法，使用 <code>hexo g</code> 将 md 文件编译成 html 文件，然后执行 <code>hexo s</code>就可以在本地预览了。</p>
-<p>更多信息: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="启动本地服务器">启动本地服务器</h3>
-<pre><code><span class="variable">$ </span>hexo server
-简写：hexo s
-</code></pre><p>会开启一个端口为 4000 的本地服务器，可以用于本地调试</p>
-<p>更多信息: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="直接将代码部署到_Github_Pages">直接将代码部署到 Github Pages</h3>
-<pre><code><span class="variable">$ </span>hexo deploy
-简写： hexo d
-</code></pre><p>更多信息: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-<h3 id="组合命令">组合命令</h3>
-<pre><code><span class="preprocessor"># 编译之后，打开本地服务器</span>
-hexo s -g
-<span class="preprocessor"># 编译之后，直接发布到 Github Pages</span>
-hexo d -g
-</code></pre><h2 id="五、发表文章">五、发表文章</h2>
-<h3 id="创建一篇新的文章">创建一篇新的文章</h3>
-<pre><code>$ hexo <span class="built_in">new</span> <span class="built_in">post</span>-name
-简写：hexo n <span class="built_in">post</span>-name
-</code></pre><p>这句命令会在 source/_posts 下生成一个叫做 post-name.md 的文件，然后通过 <code>hexo d -g</code>，打开本地服务器查看网页内容。</p>
-<h3 id="创建一个页面">创建一个页面</h3>
-<pre><code>hexo new page <span class="keyword">about</span>
-简写：hexo n page <span class="keyword">about</span>
-</code></pre><p>这条命令就可以生成一个 about 页面。</p>
-<p>更多信息: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="把修改保存到自己的_github_上">把修改保存到自己的 github 上</h3>
-<pre><code><span class="preprocessor"># 添加自己的仓库源</span>
-git remote add skylar https:<span class="comment">//github.com/zhangmengxue/blog.git</span>
-<span class="preprocessor"># 推上去</span>
-git push skylar master
-<span class="preprocessor">## 这里需要注意的是，不需要管 gh-pages 分支，这个分支已经被 hexo 自动推送了</span>
-</code></pre><h2 id="六、其他方面的介绍">六、其他方面的介绍</h2>
-<p>在 themes/jacman 中可以配置页面信息，css 采用 stylus 写的，博客信息的配置也可在 <code>themes/jacman/_config.yml</code> 中修改。</p>
-<p>如果需要修改文件内容，建议直接在全局搜索关键词。</p>
-
+#</p>
         
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2014/12/20/hei-hexo/#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
+    
+    <time datetime="2014-12-19T19:10:39.000Z" itemprop="datePublished">2014-12-20</time>
+  </a>
+</section>
 
 
 
@@ -229,10 +113,6 @@ git push skylar master
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
 <aside class="clearfix">
-
-  
-
-  
 
   <div class="linkslist">
   <p class="asidetitle">友情链接</p>
@@ -248,6 +128,16 @@ git push skylar master
         
     </ul>
 </div>
+
+  <div class="weiboshow">
+  <p class="asidetitle">新浪微博</p>
+    <iframe width="100%" height="400" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=2&ptype=1&speed=0&skin=4&isTitle=1&noborder=1&isWeibo=1&isFans=0&uid=2939834277&verifier=f079b235&colors=ffdde3,fef8f9,666666,464646,fef2f4&dpc=1"></iframe>
+</div>
+
+
+  
+
+  
 
   <div class="rsspart">
 	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
@@ -271,6 +161,10 @@ git push skylar master
 	 
 	<div class="social-font" class="clearfix">
 		
+		<a href="http://weibo.com/2939834277" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/zhangmengxue" target="_blank" class="icon-github" title="github"></a>
 		
 		
 		
@@ -279,9 +173,11 @@ git push skylar master
 		
 		
 		
+		
+		<a href="mailto:skylarzhang@163.com" target="_blank" class="icon-email" title="Email Me"></a>
 		
 	</div>
-		<p class="copyright">Powered by <a href="http://zespia.tw/hexo/" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Pacman">Jacman</a> © 2014 
+		<p class="copyright">Powered by <a href="http://zespia.tw/hexo/" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Pacman">Jacman</a> © 2015 
 		
 		<a href="http://zhangmengxue.com/about" target="_blank" title="skylar">skylar</a>
 		
